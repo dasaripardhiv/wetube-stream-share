@@ -1,10 +1,12 @@
 import { MoreVertical, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface VideoCardProps {
+  id: string;
   title: string;
   channel: string;
-  views: string;
+  views: number;
   timestamp: string;
   duration: string;
   thumbnail: string;
@@ -12,6 +14,7 @@ interface VideoCardProps {
 }
 
 const VideoCard = ({ 
+  id,
   title, 
   channel, 
   views, 
@@ -21,7 +24,7 @@ const VideoCard = ({
   channelAvatar 
 }: VideoCardProps) => {
   return (
-    <div className="group cursor-pointer">
+    <Link to={`/video/${id}`} className="group cursor-pointer block">
       {/* Thumbnail */}
       <div className="relative aspect-video mb-3 overflow-hidden rounded-lg bg-muted">
         <img 
@@ -64,7 +67,7 @@ const VideoCard = ({
               {channel}
             </p>
             <div className="flex items-center gap-1">
-              <span>{views} views</span>
+              <span>{views.toLocaleString()} views</span>
               <span>•</span>
               <span>{timestamp}</span>
             </div>
@@ -76,7 +79,7 @@ const VideoCard = ({
           <MoreVertical className="h-4 w-4" />
         </Button>
       </div>
-    </div>
+    </Link>
   );
 };
 
