@@ -57,6 +57,29 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // WeTube custom colors
+        wetube: {
+          red: "hsl(var(--wetube-red))",
+          "red-hover": "hsl(var(--wetube-red-hover))",
+          dark: "hsl(var(--wetube-dark))",
+          darker: "hsl(var(--wetube-darker))",
+          card: "hsl(var(--wetube-card))",
+          "card-hover": "hsl(var(--wetube-card-hover))",
+        },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-card": "var(--gradient-card)",
+        "gradient-hero": "var(--gradient-hero)",
+      },
+      boxShadow: {
+        "card": "var(--shadow-card)",
+        "card-hover": "var(--shadow-card-hover)",
+        "glow": "var(--shadow-glow)",
+      },
+      transitionTimingFunction: {
+        "smooth": "var(--transition-smooth)",
+        "bounce": "var(--transition-bounce)",
       },
       borderRadius: {
         lg: "var(--radius)",
